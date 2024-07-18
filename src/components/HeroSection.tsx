@@ -7,7 +7,14 @@ const HeroSection: React.FC = () => {
       <div className="relative z-10 max-w-2xl mx-auto">
         <h1 className="text-4xl sm:text-5xl font-extrabold mb-6 text-neutral">Bem-vindo à Pousada Natureza</h1>
         <p className="text-xl sm:text-2xl mb-8 text-neutral">Pesca esportiva no Rio Preto da Eva, Amazônia</p>
-        <a href="#contact" className="bg-secondary text-neutral py-2 px-4 rounded-lg hover:bg-secondary-dark transition duration-300 shadow-lg">Reserve Agora</a>
+        <a
+          href="https://wa.me/559295266653"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-secondary text-neutral py-2 px-4 rounded-lg hover:bg-secondary-dark transition duration-300 shadow-lg"
+        >
+          Reserve Agora
+        </a>
       </div>
     </section>
   );
