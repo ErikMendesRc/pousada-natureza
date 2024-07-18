@@ -11,7 +11,7 @@ const ReservationSection: React.FC = () => {
         href="https://wa.me/559295266653"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-primary text-white py-2 px-4 rounded hover:bg-darkGreen transition-colors duration-300"
+        className="bg-primary text-white py-2 px-4 rounded-lg hover:bg-darkGreen transition-colors duration-300 shadow-lg"
       >
         Faça sua Reserva
       </a>
