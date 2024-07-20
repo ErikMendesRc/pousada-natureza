@@ -11,15 +11,15 @@ const ServicesSection: React.FC = () => {
           <div className="w-full px-4">
             <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
               <h2 className="text-darkGreen dark:text-white mb-3 text-3xl leading-[1.2] font-bold sm:text-4xl md:text-[40px]">O que oferecemos</h2>
-              <p className="text-darkGreen text-base dark:text-neutral">Confira abaixo nossos principais serviços e benefícios exclusivos para nossos clientes.</p>
+              <p className="text-darkGreen text-base dark:text-neutral">Confira abaixo nossos principais serviços e benefícios exclusivos para nossos clientes. Tudo isso por apenas 4.500,00 reais por pessoa.</p>
             </div>
           </div>
         </div>
         <div className="-mx-4 flex flex-wrap">
           {[
             { icon: faFish, title: 'Pacote de 5 Dias de Pesca', description: 'Desfrute de cinco dias de pesca emocionante e relaxante, incluindo todas as refeições e bebidas.' },
-            { icon: faShip, title: 'Pescarias Guiadas', description: 'Guias experientes para garantir a melhor experiência de pesca.' },
-            { icon: faPlane, title: 'Translados Inclusos', description: 'Transporte confortável e seguro de ida e volta até o aeroporto.' },
+            { icon: faShip, title: 'Pescarias Guiadas', description: 'Guias certificados e habilitados pelo governo de Manaus para garantir a melhor experiência de pesca.' },
+            { icon: faPlane, title: 'Translados Inclusos', description: 'Transporte confortável e seguro de ida e volta até o aeroporto, podendo ser de carro ou van.' },
             { icon: faUtensils, title: 'Pensão Completa', description: 'Todas as refeições incluídas, com opções variadas e deliciosas.' },
             { icon: faWifi, title: 'Internet Gratuita', description: 'Internet via Starlink, garantindo alta velocidade e estabilidade.' },
             { icon: faUmbrellaBeach, title: 'Lual na Praia', description: 'Desfrute de um lual na praia com churrasco e bebidas para a despedida do grupo.' }

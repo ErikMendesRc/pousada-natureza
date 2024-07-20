@@ -14,7 +14,7 @@ const data = [
   { imgelink: "/images/foto8.jpeg", alt: "Cozinha ao ar livre da pousada", legend: "Cozinha ao ar livre da pousada" },
   { imgelink: "/images/foto9.jpeg", alt: "Quarto da pousada", legend: "Quarto da pousada" },
   { imgelink: "/images/foto10.jpeg", alt: "Pescador exibindo uma aruanã", legend: "Pescador exibindo uma aruanã" },
-  { imgelink: "/images/foto11.jpeg", alt: "Close de um tucunaré", legend: "Close de um tucunaré" },
+  { imgelink: "/images/foto11.jpg", alt: "Close de um tucunaré", legend: "Close de um tucunaré" },
   { imgelink: "/images/foto12.jpeg", alt: "Vista do rio ao entardecer", legend: "Vista do rio ao entardecer" },
   { imgelink: "/images/foto13.jpeg", alt: "Aruanã capturada", legend: "Aruanã capturada" },
   { imgelink: "/images/foto14.jpeg", alt: "Pesca esportiva", legend: "Pesca esportiva" },
