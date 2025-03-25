@@ -1,53 +1,40 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "../app/globals.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import type React from "react"
+import "@/app/globals.css"
+import { Inter } from "next/font/google"
+import { ThemeProvider } from "@/components/theme-provider"
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Pousada Natureza - Pesca Esportiva na Amazônia",
-  description: "Pousada Natureza - Pesca esportiva no Rio Preto da Eva, Amazônia. Desfrute de uma experiência única de pesca do tucunaré açu com conforto e comodidade.",
-  keywords: "pesca esportiva, tucunaré açu, Rio Preto da Eva, Amazônia, lodge de pesca, pesca no Amazonas",
-  openGraph: {
-    title: "Pousada Natureza - Pesca Esportiva na Amazônia",
-    description: "Localizada no coração da Amazônia, no Rio Preto da Eva, a Pousada Natureza é o destino perfeito para os amantes da pesca esportiva.",
-    url: "https://www.pousadanaturezaeva.com.br",
-    type: "website",
-    images: [
-      {
-        url: "https://www.pousadanaturezaeva.com.br/images/logo.png",
-        width: 800,
-        height: 600,
-        alt: "Pousada Natureza Logo"
-      }
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@pousadanaturezaeva",
-    title: "Pousada Natureza - Pesca Esportiva na Amazônia",
-    description: "Localizada no coração da Amazônia, no Rio Preto da Eva, a Pousada Natureza é o destino perfeito para os amantes da pesca esportiva.",
-    images: ["https://www.pousadanaturezaeva.com.br/images/logo.png"]
-  },
-  alternates: {
-    canonical: "https://www.pousadanaturezaeva.com.br"
-  }
-};
+const inter = Inter({ subsets: ["latin"] })
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Pousada Natureza" />
+        <meta name="geo.region" content="BR-AM" />
+        <meta name="geo.placename" content="Rio Preto da Eva" />
+        <meta name="geo.position" content="-3.0718531;,-59.4610173" />
+        <meta name="ICBM" content="-3.0718531, ,-59.4610173" />
+      </head>
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
+
+
+
+import './globals.css'
+
+export const metadata = {
+      generator: 'https://www.eebtecnologia.com.br/'
+    };

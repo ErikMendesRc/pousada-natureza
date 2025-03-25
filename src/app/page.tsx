@@ -1,56 +1,98 @@
-import Head from 'next/head';
-import HeroSection from "../components/HeroSection";
-import AboutSection from "../components/AboutSection";
-import ServicesSection from "../components/ServicesSection";
-import TestimonialsSection from "../components/TestimonialsSection";
-import GallerySection from "../components/GallerySection";
-import ContactSection from "../components/ContactSection";
-import ReservationSection from "../components/ReservationSection";
-import LocationSection from "@/components/LocationSection";
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "@/app/globals.css"
+import { ThemeProvider } from "@/components/theme-provider"
+import { LanguageProvider } from "@/components/language-provider"
+import { JsonLd } from "@/components/json-ld"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+import { HeroSection } from "@/components/hero-section"
+import { SobreSection } from "@/components/sobre-section"
+import { PacotesSection } from "@/components/pacotes-section"
+import { AllInclusiveSection } from "@/components/all-inclusive-section"
+import { EquipamentosSection } from "@/components/equipamentos-section"
+import { EspeciesPescaSection } from "@/components/especies-pesca-section"
+import { PrecosSection } from "@/components/precos-section"
+import { AcomodacoesSection } from "@/components/acomodacoes-section"
+import { LocalizacaoSection } from "@/components/localizacao-section"
+import { GaleriaSection } from "@/components/galeria-section"
+import { DepoimentosSection } from "@/components/depoimentos-section"
+import { ContatoSection } from "@/components/contato-section"
+
+const inter = Inter({ subsets: ["latin"] })
+
+export const metadata: Metadata = {
+  title: "Pousada Natureza | Pesca Esportiva no Rio Preto da Eva, Amazonas",
+  description:
+    "Experimente a melhor pesca esportiva da Amazônia na Pousada Natureza. Pacotes all-inclusive, barcos equipados, guias experientes e conforto no coração da floresta amazônica.",
+  keywords:
+    "pesca esportiva, Amazonas, Rio Preto da Eva, tucunaré, pirarucu, pacotes de pesca, pousada de pesca, Igarapé Tiririca, Rio Negro",
+  openGraph: {
+    title: "Pousada Natureza | Pesca Esportiva no Rio Preto da Eva, Amazonas",
+    description:
+      "Experimente a melhor pesca esportiva da Amazônia na Pousada Natureza. Pacotes all-inclusive, barcos equipados, guias experientes e conforto no coração da floresta amazônica.",
+    url: "https://www.pousadanatureza.com.br",
+    siteName: "Pousada Natureza",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Pousada Natureza - Pesca Esportiva na Amazônia",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pousada Natureza | Pesca Esportiva no Rio Preto da Eva, Amazonas",
+    description:
+      "Experimente a melhor pesca esportiva da Amazônia na Pousada Natureza. Pacotes all-inclusive, barcos equipados, guias experientes e conforto no coração da floresta amazônica.",
+    images: ["/twitter-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://www.pousadanatureza.com.br",
+    languages: {
+      "en-US": "https://www.pousadanatureza.com.br/en",
+      "es-ES": "https://www.pousadanatureza.com.br/es",
+    },
+  },
+}
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Pousada Natureza - Pesca Esportiva na Amazônia</title>
-        <meta name="description" content="Localizada no coração da Amazônia, no Rio Preto da Eva, a Pousada Natureza é o destino perfeito para os amantes da pesca esportiva. Especializamos na pesca do tucunaré açu, oferecendo uma experiência inesquecível em meio à exuberante natureza amazônica." />
-        <meta name="keywords" content="pesca esportiva, tucunaré açu, Rio Preto da Eva, Amazônia, lodge de pesca, pesca no Amazonas" />
-        <meta property="og:title" content="Pousada Natureza - Pesca Esportiva na Amazônia" />
-        <meta property="og:description" content="Localizada no coração da Amazônia, no Rio Preto da Eva, a Pousada Natureza é o destino perfeito para os amantes da pesca esportiva." />
-        <meta property="og:image" content="https://www.pousadanaturezaeva.com.br/images/logo.png" />
-        <meta property="og:url" content="https://www.pousadanaturezaeva.com.br" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@pousadanaturezaeva" />
-        <meta name="twitter:title" content="Pousada Natureza - Pesca Esportiva na Amazônia" />
-        <meta name="twitter:description" content="Localizada no coração da Amazônia, no Rio Preto da Eva, a Pousada Natureza é o destino perfeito para os amantes da pesca esportiva." />
-        <meta name="twitter:image" content="https://www.pousadanaturezaeva.com.br/images/logo.png" />
-        <link rel="canonical" href="https://www.pousadanaturezaeva.com.br" />
-      </Head>
-      <main>
-        <header>
-          <HeroSection />
-        </header>
-        <section id="about">
-          <AboutSection />
-        </section>
-        <section id="services">
-          <ServicesSection />
-        </section>
-        <section id="testimonials">
-          <TestimonialsSection />
-        </section>
-        <section id="gallery">
-          <GallerySection />
-        </section>
-        <section id="reservation">
-          <ReservationSection />
-        </section>
-        <section id="location">
-          <LocationSection />
-        </section>
-        <footer>
-        </footer>
-      </main>
-    </>
-  );
+    <html lang="pt-BR" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <LanguageProvider>
+            <JsonLd />
+            <div className="flex min-h-screen flex-col">
+              <Header />
+              <main className="flex-1">
+                <HeroSection />
+                <SobreSection />
+                <PacotesSection />
+                <AllInclusiveSection />
+                <EquipamentosSection />
+                <EspeciesPescaSection />
+                <PrecosSection />
+                <AcomodacoesSection />
+                <LocalizacaoSection />
+                <GaleriaSection />
+                <DepoimentosSection />
+                <ContatoSection />
+              </main>
+              <Footer />
+            </div>
+          </LanguageProvider>
+        </ThemeProvider>
+      </body>
+    </html>
+  )
 }

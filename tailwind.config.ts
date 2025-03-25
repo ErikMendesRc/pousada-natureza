@@ -1,48 +1,81 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
-const config: Config = {
+const config = {
+  darkMode: ["class"],
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+    "*.{js,ts,jsx,tsx,mdx}",
   ],
+  prefix: "",
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
       colors: {
-        primary: "#007B5E", // Verde Amazônico
-        secondary: "#FFD700", // Dourado (peixes)
-        accent: "#1E90FF", // Azul (água)
-        neutral: "#F5F5F5", // Cinza Claro (fundo)
-        dark: "#2F4F4F", // Cinza Escuro (textos)
-        darkGreen: "#004d40", // Verde Escuro
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(142, 76%, 36%)", // Verde amazônico
+          foreground: "hsl(0, 0%, 98%)",
+        },
+        secondary: {
+          DEFAULT: "hsl(203, 70%, 52%)", // Azul do rio
+          foreground: "hsl(0, 0%, 98%)",
+        },
+        destructive: {
+          DEFAULT: "hsl(0, 84%, 60%)",
+          foreground: "hsl(0, 0%, 98%)",
+        },
+        muted: {
+          DEFAULT: "hsl(210, 20%, 98%)",
+          foreground: "hsl(215, 16%, 47%)",
+        },
+        accent: {
+          DEFAULT: "hsl(210, 40%, 96%)",
+          foreground: "hsl(222, 47%, 11%)",
+        },
+        popover: {
+          DEFAULT: "hsl(0, 0%, 100%)",
+          foreground: "hsl(222, 47%, 11%)",
+        },
+        card: {
+          DEFAULT: "hsl(0, 0%, 100%)",
+          foreground: "hsl(222, 47%, 11%)",
+        },
       },
-      fontFamily: {
-        sans: ["Roboto", "Helvetica", "Arial", "sans-serif"],
-        serif: ["Merriweather", "serif"],
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
-      spacing: {
-        "xs": "4px",
-        "sm": "8px",
-        "md": "16px",
-        "lg": "24px",
-        "xl": "32px",
-        "2xl": "48px",
-        "3xl": "64px",
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
       },
-      screens: {
-        'sm': '640px',
-        'md': '768px',
-        'lg': '1024px',
-        'xl': '1280px',
-        '2xl': '1536px',
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
-  plugins: [],
-};
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config
 
-export default config;
+export default config
