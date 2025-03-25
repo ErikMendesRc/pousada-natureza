@@ -52,10 +52,6 @@ export function AcomodacoesSection() {
                 <Wifi className="h-5 w-5 text-primary" aria-hidden="true" />
                 <span>{t("accommodations.wifi")}</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Tv className="h-5 w-5 text-primary" aria-hidden="true" />
-                <span>{t("accommodations.tv")}</span>
-              </div>
             </div>
           </div>
         </div>
