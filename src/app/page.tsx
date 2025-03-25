@@ -4,8 +4,6 @@ import "@/app/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { LanguageProvider } from "@/components/language-provider"
 import { JsonLd } from "@/components/json-ld"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { HeroSection } from "@/components/hero-section"
 import { SobreSection } from "@/components/sobre-section"
 import { PacotesSection } from "@/components/pacotes-section"
@@ -18,6 +16,8 @@ import { LocalizacaoSection } from "@/components/localizacao-section"
 import { GaleriaSection } from "@/components/galeria-section"
 import { DepoimentosSection } from "@/components/depoimentos-section"
 import { ContatoSection } from "@/components/contato-section"
+import { Footer } from "@/components/footer"
+import { Header } from "@/components/header"
 
 const inter = Inter({ subsets: ["latin"] })
 
