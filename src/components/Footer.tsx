@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Fish, Mail, MapPin, Phone } from "lucide-react"
+import { Fish, Mail, MapPin, Phone, Globe } from "lucide-react"
 import { useLanguage } from "./language-provider"
 
 export function Footer() {
@@ -150,6 +150,17 @@ export function Footer() {
                   contato.pousadanatureza@gmail.com
                 </a>
               </div>
+              <div className="flex items-center gap-3">
+                <Globe className="h-5 w-5 text-primary shrink-0" aria-hidden="true" />
+                <a
+                  href="https://www.eebtecnologia.com.br"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Crie seu site com a gente.
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -164,6 +175,17 @@ export function Footer() {
             |
             <Link href="#" className="hover:underline ml-2">
               {t("footer.terms")}
+            </Link>
+          </p>
+          <p className="mt-2">
+            Desenvolvido por{" "}
+            <Link
+              href="https://www.eebtecnologia.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              E&B Tecnologia
             </Link>
           </p>
         </div>
