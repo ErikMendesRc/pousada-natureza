@@ -99,9 +99,9 @@ export function DepoimentosSection() {
                 ))}
               </div>
               <p className="italic mb-4">
-                "Pescaria dos sonhos! Consegui pescar um pirarucu de mais de 2 metros com a ajuda do guia especializado.
-                A estrutura da pousada é excelente, com quartos confortáveis e uma vista deslumbrante para o rio.
-                Recomendo a todos os pescadores."
+                &quot;Pescaria dos sonhos! Consegui pescar um pirarucu de mais de 2 metros com a ajuda do guia
+                especializado. A estrutura da pousada é excelente, com quartos confortáveis e uma vista deslumbrante
+                para o rio. Recomendo a todos os pescadores.&quot;
               </p>
             </CardContent>
             <CardFooter className="flex items-center gap-3 border-t pt-4">
@@ -127,9 +127,9 @@ export function DepoimentosSection() {
                 ))}
               </div>
               <p className="italic mb-4">
-                "Como fotógrafo de natureza, encontrei na Pousada Natureza um verdadeiro tesouro. A diversidade de aves
-                e animais é impressionante, e os guias conhecem os melhores locais para observação. As acomodações são
-                excelentes e a comida regional é deliciosa."
+                &quot;Como fotógrafo de natureza, encontrei na Pousada Natureza um verdadeiro tesouro. A diversidade de
+                aves e animais é impressionante, e os guias conhecem os melhores locais para observação. As acomodações
+                são excelentes e a comida regional é deliciosa.&quot;
               </p>
             </CardContent>
             <CardFooter className="flex items-center gap-3 border-t pt-4">
@@ -155,9 +155,9 @@ export function DepoimentosSection() {
                 ))}
               </div>
               <p className="italic mb-4">
-                "Viagem em família inesquecível! As crianças adoraram o contato com a natureza e os passeios de barco.
-                Meu marido pescou vários peixes e eu pude relaxar em meio à tranquilidade da floresta. Equipe muito
-                atenciosa e prestativa."
+                &quot;Viagem em família inesquecível! As crianças adoraram o contato com a natureza e os passeios de
+                barco. Meu marido pescou vários peixes e eu pude relaxar em meio à tranquilidade da floresta. Equipe
+                muito atenciosa e prestativa.&quot;
               </p>
             </CardContent>
             <CardFooter className="flex items-center gap-3 border-t pt-4">
